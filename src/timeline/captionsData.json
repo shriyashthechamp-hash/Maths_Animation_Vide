@@ -1,0 +1,548 @@
+[
+  {
+    "startSec": 0.0,
+    "endSec": 6.04,
+    "startFrame": 0,
+    "endFrame": 181,
+    "text": "What if I told you that a simple matrix could completely transform the space around you?"
+  },
+  {
+    "startSec": 6.04,
+    "endSec": 11.56,
+    "startFrame": 181,
+    "endFrame": 347,
+    "text": "Not just to move a point, not just change a vector, but transform an entire plane sounds"
+  },
+  {
+    "startSec": 11.56,
+    "endSec": 12.56,
+    "startFrame": 347,
+    "endFrame": 377,
+    "text": "interesting, right?"
+  },
+  {
+    "startSec": 12.56,
+    "endSec": 17.72,
+    "startFrame": 377,
+    "endFrame": 532,
+    "text": "Well, that's exactly what linear transformation allows us to understand."
+  },
+  {
+    "startSec": 17.72,
+    "endSec": 22.44,
+    "startFrame": 532,
+    "endFrame": 673,
+    "text": "And today we're going to explore how matrices actually make this happen."
+  },
+  {
+    "startSec": 22.44,
+    "endSec": 24.88,
+    "startFrame": 673,
+    "endFrame": 746,
+    "text": "So let's get started."
+  },
+  {
+    "startSec": 24.88,
+    "endSec": 28.8,
+    "startFrame": 746,
+    "endFrame": 864,
+    "text": "Let's begin with something familiar, our standard basis vector."
+  },
+  {
+    "startSec": 28.8,
+    "endSec": 34.04,
+    "startFrame": 864,
+    "endFrame": 1021,
+    "text": "This is E1 pointing along the x-axis with coordinates one comma zero."
+  },
+  {
+    "startSec": 34.04,
+    "endSec": 39.12,
+    "startFrame": 1021,
+    "endFrame": 1174,
+    "text": "And this is E2 pointing along the y-axis with coordinates zero comma one."
+  },
+  {
+    "startSec": 39.12,
+    "endSec": 41.2,
+    "startFrame": 1174,
+    "endFrame": 1236,
+    "text": "Now, here's the interesting part."
+  },
+  {
+    "startSec": 41.2,
+    "endSec": 43.8,
+    "startFrame": 1236,
+    "endFrame": 1314,
+    "text": "Take any vector in a two-dimensional space."
+  },
+  {
+    "startSec": 43.8,
+    "endSec": 49.08,
+    "startFrame": 1314,
+    "endFrame": 1472,
+    "text": "We can express it as x times E1 plus y times E2."
+  },
+  {
+    "startSec": 49.08,
+    "endSec": 54.16,
+    "startFrame": 1472,
+    "endFrame": 1625,
+    "text": "In other words, every vector is built using these two basic directions."
+  },
+  {
+    "startSec": 54.16,
+    "endSec": 59.92,
+    "startFrame": 1625,
+    "endFrame": 1798,
+    "text": "Now imagine applying a matrix A, the first column tells us where E1 lands, the second"
+  },
+  {
+    "startSec": 59.92,
+    "endSec": 62.56,
+    "startFrame": 1798,
+    "endFrame": 1877,
+    "text": "column tells us where E2 lands."
+  },
+  {
+    "startSec": 62.56,
+    "endSec": 68.96000000000001,
+    "startFrame": 1877,
+    "endFrame": 2069,
+    "text": "And because every vector is made from these two bases vector, knowing where they land"
+  },
+  {
+    "startSec": 68.96000000000001,
+    "endSec": 74.6,
+    "startFrame": 2069,
+    "endFrame": 2238,
+    "text": "tells us where every other vector goes, the two columns tell the whole two-dimensional"
+  },
+  {
+    "startSec": 74.6,
+    "endSec": 75.6,
+    "startFrame": 2238,
+    "endFrame": 2268,
+    "text": "story."
+  },
+  {
+    "startSec": 75.6,
+    "endSec": 81.0,
+    "startFrame": 2268,
+    "endFrame": 2430,
+    "text": "Let's see this in action with our first example, a shear transformation."
+  },
+  {
+    "startSec": 81.0,
+    "endSec": 84.68,
+    "startFrame": 2430,
+    "endFrame": 2540,
+    "text": "Here this matrix, one zero, one one."
+  },
+  {
+    "startSec": 84.68,
+    "endSec": 88.08,
+    "startFrame": 2540,
+    "endFrame": 2642,
+    "text": "Let's apply it, a standard bias vector."
+  },
+  {
+    "startSec": 88.08,
+    "endSec": 94.44,
+    "startFrame": 2642,
+    "endFrame": 2833,
+    "text": "First E1, multiplying gives us one comma one, so our horizontal basis vector moves diagonally"
+  },
+  {
+    "startSec": 94.44,
+    "endSec": 95.44,
+    "startFrame": 2833,
+    "endFrame": 2863,
+    "text": "upwards."
+  },
+  {
+    "startSec": 95.44,
+    "endSec": 102.6,
+    "startFrame": 2863,
+    "endFrame": 3078,
+    "text": "Now E2, its image is zero comma one, and here's the beautiful part, E2 stays exactly where"
+  },
+  {
+    "startSec": 102.6,
+    "endSec": 103.75999999999999,
+    "startFrame": 3078,
+    "endFrame": 3113,
+    "text": "it was."
+  },
+  {
+    "startSec": 103.75999999999999,
+    "endSec": 107.52000000000001,
+    "startFrame": 3113,
+    "endFrame": 3226,
+    "text": "So now watch what happens to the entire unit square."
+  },
+  {
+    "startSec": 107.52000000000001,
+    "endSec": 114.2,
+    "startFrame": 3226,
+    "endFrame": 3426,
+    "text": "As the basis vector moves the square, transforms into a parallelogram, but this isn't just"
+  },
+  {
+    "startSec": 114.2,
+    "endSec": 115.75999999999999,
+    "startFrame": 3426,
+    "endFrame": 3473,
+    "text": "one square moving."
+  },
+  {
+    "startSec": 115.75999999999999,
+    "endSec": 120.0,
+    "startFrame": 3473,
+    "endFrame": 3600,
+    "text": "The entire coordinate grid follows the same transformation."
+  },
+  {
+    "startSec": 120.0,
+    "endSec": 126.64,
+    "startFrame": 3600,
+    "endFrame": 3799,
+    "text": "For a general input, x comma y, the transformation produces x comma x plus y."
+  },
+  {
+    "startSec": 126.64,
+    "endSec": 129.6,
+    "startFrame": 3799,
+    "endFrame": 3888,
+    "text": "So the horizontal direction changes."
+  },
+  {
+    "startSec": 129.6,
+    "endSec": 136.07999999999998,
+    "startFrame": 3888,
+    "endFrame": 4082,
+    "text": "The vertical direction stays fixed, and every point follows the same rule, that's a shear."
+  },
+  {
+    "startSec": 136.07999999999998,
+    "endSec": 138.64,
+    "startFrame": 4082,
+    "endFrame": 4159,
+    "text": "But here's an important question."
+  },
+  {
+    "startSec": 138.64,
+    "endSec": 141.18,
+    "startFrame": 4159,
+    "endFrame": 4235,
+    "text": "What actually makes a transformation linear?"
+  },
+  {
+    "startSec": 141.18,
+    "endSec": 147.04,
+    "startFrame": 4235,
+    "endFrame": 4411,
+    "text": "A linear transformation must preserve two operations, addition and scalar multiplication."
+  },
+  {
+    "startSec": 147.04,
+    "endSec": 148.68,
+    "startFrame": 4411,
+    "endFrame": 4460,
+    "text": "Let's understand both."
+  },
+  {
+    "startSec": 148.68,
+    "endSec": 150.2,
+    "startFrame": 4460,
+    "endFrame": 4506,
+    "text": "First, additivity."
+  },
+  {
+    "startSec": 150.2,
+    "endSec": 155.48,
+    "startFrame": 4506,
+    "endFrame": 4664,
+    "text": "If we add two input vectors and then transform this sum, we should get exactly the same result"
+  },
+  {
+    "startSec": 155.48,
+    "endSec": 160.12,
+    "startFrame": 4664,
+    "endFrame": 4804,
+    "text": "as transforming each vector separately and adding those outputs."
+  },
+  {
+    "startSec": 160.12,
+    "endSec": 166.8,
+    "startFrame": 4804,
+    "endFrame": 5004,
+    "text": "In mathematical language, t of u plus v equals t of u plus t of v."
+  },
+  {
+    "startSec": 166.8,
+    "endSec": 168.8,
+    "startFrame": 5004,
+    "endFrame": 5064,
+    "text": "Second, homogeneity."
+  },
+  {
+    "startSec": 168.8,
+    "endSec": 175.04,
+    "startFrame": 5064,
+    "endFrame": 5251,
+    "text": "If we multiply an input vector by a scalar, its transformed output must scale by the exact"
+  },
+  {
+    "startSec": 175.04,
+    "endSec": 180.32,
+    "startFrame": 5251,
+    "endFrame": 5410,
+    "text": "same scalar, t of cu equals c times of u."
+  },
+  {
+    "startSec": 180.32,
+    "endSec": 185.64,
+    "startFrame": 5410,
+    "endFrame": 5569,
+    "text": "So remember, a linear transformation preserves addition and scalar multiplication, and an"
+  },
+  {
+    "startSec": 185.64,
+    "endSec": 189.48,
+    "startFrame": 5569,
+    "endFrame": 5684,
+    "text": "immediate consequences that origin stays fixed."
+  },
+  {
+    "startSec": 189.48,
+    "endSec": 191.88,
+    "startFrame": 5684,
+    "endFrame": 5756,
+    "text": "Now comes one of the most interesting parts."
+  },
+  {
+    "startSec": 191.88,
+    "endSec": 197.36,
+    "startFrame": 5756,
+    "endFrame": 5921,
+    "text": "So far, we have stated that with a matrix and studied the transformation, it performs."
+  },
+  {
+    "startSec": 197.36,
+    "endSec": 201.12,
+    "startFrame": 5921,
+    "endFrame": 6034,
+    "text": "But what if we start with the transformation itself?"
+  },
+  {
+    "startSec": 201.12,
+    "endSec": 202.72,
+    "startFrame": 6034,
+    "endFrame": 6082,
+    "text": "Can we build the matrix?"
+  },
+  {
+    "startSec": 202.72,
+    "endSec": 208.76,
+    "startFrame": 6082,
+    "endFrame": 6263,
+    "text": "Let's make this function, t of x comma y equals x plus y comma x minus y."
+  },
+  {
+    "startSec": 208.76,
+    "endSec": 214.24,
+    "startFrame": 6263,
+    "endFrame": 6427,
+    "text": "We already know that a matrix representing a linear transformation is determined by where"
+  },
+  {
+    "startSec": 214.24,
+    "endSec": 216.8,
+    "startFrame": 6427,
+    "endFrame": 6504,
+    "text": "it sends the standard basis vector."
+  },
+  {
+    "startSec": 216.8,
+    "endSec": 218.84,
+    "startFrame": 6504,
+    "endFrame": 6565,
+    "text": "So let's find those images."
+  },
+  {
+    "startSec": 218.84,
+    "endSec": 225.48,
+    "startFrame": 6565,
+    "endFrame": 6764,
+    "text": "Step one, apply t to e1, substituting 1 comma 0 gives us 1 comma 1."
+  },
+  {
+    "startSec": 225.48,
+    "endSec": 233.4,
+    "startFrame": 6764,
+    "endFrame": 7002,
+    "text": "Now step two, apply t to e2, substituting 0 comma 1 gives us 1 comma minus 1."
+  },
+  {
+    "startSec": 233.4,
+    "endSec": 235.16,
+    "startFrame": 7002,
+    "endFrame": 7055,
+    "text": "And now what's this?"
+  },
+  {
+    "startSec": 235.16,
+    "endSec": 240.36,
+    "startFrame": 7055,
+    "endFrame": 7211,
+    "text": "We take these two transformed vectors and place them directly into the columns of our"
+  },
+  {
+    "startSec": 240.36,
+    "endSec": 241.36,
+    "startFrame": 7211,
+    "endFrame": 7241,
+    "text": "matrix."
+  },
+  {
+    "startSec": 241.36,
+    "endSec": 245.32,
+    "startFrame": 7241,
+    "endFrame": 7360,
+    "text": "Our matrix becomes 1 1, 1 minus 1, and that's it."
+  },
+  {
+    "startSec": 245.32,
+    "endSec": 249.28,
+    "startFrame": 7360,
+    "endFrame": 7478,
+    "text": "We have constructed the matrix directly from the transformation."
+  },
+  {
+    "startSec": 249.28,
+    "endSec": 252.16,
+    "startFrame": 7478,
+    "endFrame": 7565,
+    "text": "But let's verify that it actually works."
+  },
+  {
+    "startSec": 252.16,
+    "endSec": 255.22,
+    "startFrame": 7565,
+    "endFrame": 7657,
+    "text": "Take the input vector 3 comma 2."
+  },
+  {
+    "startSec": 255.22,
+    "endSec": 259.8,
+    "startFrame": 7657,
+    "endFrame": 7794,
+    "text": "Using the original function, we get 3 plus 2 and 3 minus 2."
+  },
+  {
+    "startSec": 259.8,
+    "endSec": 261.24,
+    "startFrame": 7794,
+    "endFrame": 7837,
+    "text": "That's 5 comma 1."
+  },
+  {
+    "startSec": 261.24,
+    "endSec": 264.76,
+    "startFrame": 7837,
+    "endFrame": 7943,
+    "text": "Now multiply the same input by our constructed matrix."
+  },
+  {
+    "startSec": 264.76,
+    "endSec": 267.68,
+    "startFrame": 7943,
+    "endFrame": 8030,
+    "text": "We get 5 comma 1 again."
+  },
+  {
+    "startSec": 267.68,
+    "endSec": 269.68,
+    "startFrame": 8030,
+    "endFrame": 8090,
+    "text": "And that's one connection."
+  },
+  {
+    "startSec": 269.68,
+    "endSec": 271.52,
+    "startFrame": 8090,
+    "endFrame": 8146,
+    "text": "So what did we discover?"
+  },
+  {
+    "startSec": 271.52,
+    "endSec": 278.44,
+    "startFrame": 8146,
+    "endFrame": 8353,
+    "text": "First, the columns of a matrix tells us where the standard basis vector land."
+  },
+  {
+    "startSec": 278.44,
+    "endSec": 283.08,
+    "startFrame": 8353,
+    "endFrame": 8492,
+    "text": "Second, a linear transformation preserves adhesion and scalar multiplication."
+  },
+  {
+    "startSec": 283.08,
+    "endSec": 288.4,
+    "startFrame": 8492,
+    "endFrame": 8652,
+    "text": "And third, we can construct its matrix simply by applying the transformation to those basis"
+  },
+  {
+    "startSec": 288.4,
+    "endSec": 292.06,
+    "startFrame": 8652,
+    "endFrame": 8762,
+    "text": "vector and placing the results into the columns."
+  },
+  {
+    "startSec": 292.06,
+    "endSec": 294.4,
+    "startFrame": 8762,
+    "endFrame": 8832,
+    "text": "That's the beauty of linear transformations."
+  },
+  {
+    "startSec": 294.4,
+    "endSec": 299.88,
+    "startFrame": 8832,
+    "endFrame": 8996,
+    "text": "A matrix isn't just a collection of numbers, it's a way of describing how an entire space"
+  },
+  {
+    "startSec": 299.88,
+    "endSec": 306.04,
+    "startFrame": 8996,
+    "endFrame": 9181,
+    "text": "changes and once you understand where the basis vector go, you can understand where everything"
+  },
+  {
+    "startSec": 306.04,
+    "endSec": 308.8,
+    "startFrame": 9181,
+    "endFrame": 9264,
+    "text": "else goes, the matrix effect."
+  },
+  {
+    "startSec": 308.8,
+    "endSec": 311.16,
+    "startFrame": 9264,
+    "endFrame": 9335,
+    "text": "How matrices transform the space?"
+  },
+  {
+    "startSec": 311.16,
+    "endSec": 311.92,
+    "startFrame": 9335,
+    "endFrame": 9358,
+    "text": "Thank you so much."
+  }
+]
