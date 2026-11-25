@@ -1,0 +1,890 @@
+{
+	"systeminfo": "WHISPER : VITISAI = 0 | COREML = 0 | OPENVINO = 0 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | ACCELERATE = 1 | OPENMP = 1 | REPACK = 1 | ",
+	"model": {
+		"type": "base",
+		"multilingual": false,
+		"vocab": 51864,
+		"audio": {
+			"ctx": 1500,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"text": {
+			"ctx": 448,
+			"state": 512,
+			"head": 8,
+			"layer": 6
+		},
+		"mels": 80,
+		"ftype": 1
+	},
+	"params": {
+		"model": "/tmp/ggml-base.en.bin",
+		"language": "en",
+		"translate": false
+	},
+	"result": {
+		"language": "en"
+	},
+	"transcription": [
+		{
+			"timestamps": {
+				"from": "00:00:00,000",
+				"to": "00:00:06,040"
+			},
+			"offsets": {
+				"from": 0,
+				"to": 6040
+			},
+			"text": " What if I told you that a simple matrix could completely transform the space around you?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:06,040",
+				"to": "00:00:11,560"
+			},
+			"offsets": {
+				"from": 6040,
+				"to": 11560
+			},
+			"text": " Not just to move a point, not just change a vector, but transform an entire plane sounds"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:11,560",
+				"to": "00:00:12,560"
+			},
+			"offsets": {
+				"from": 11560,
+				"to": 12560
+			},
+			"text": " interesting, right?"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:12,560",
+				"to": "00:00:17,720"
+			},
+			"offsets": {
+				"from": 12560,
+				"to": 17720
+			},
+			"text": " Well, that's exactly what linear transformation allows us to understand."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:17,720",
+				"to": "00:00:22,440"
+			},
+			"offsets": {
+				"from": 17720,
+				"to": 22440
+			},
+			"text": " And today we're going to explore how matrices actually make this happen."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:22,440",
+				"to": "00:00:24,880"
+			},
+			"offsets": {
+				"from": 22440,
+				"to": 24880
+			},
+			"text": " So let's get started."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:24,880",
+				"to": "00:00:28,800"
+			},
+			"offsets": {
+				"from": 24880,
+				"to": 28800
+			},
+			"text": " Let's begin with something familiar, our standard basis vector."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:28,800",
+				"to": "00:00:34,040"
+			},
+			"offsets": {
+				"from": 28800,
+				"to": 34040
+			},
+			"text": " This is E1 pointing along the x-axis with coordinates one comma zero."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:34,040",
+				"to": "00:00:39,120"
+			},
+			"offsets": {
+				"from": 34040,
+				"to": 39120
+			},
+			"text": " And this is E2 pointing along the y-axis with coordinates zero comma one."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:39,120",
+				"to": "00:00:41,200"
+			},
+			"offsets": {
+				"from": 39120,
+				"to": 41200
+			},
+			"text": " Now, here's the interesting part."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:41,200",
+				"to": "00:00:43,800"
+			},
+			"offsets": {
+				"from": 41200,
+				"to": 43800
+			},
+			"text": " Take any vector in a two-dimensional space."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:43,800",
+				"to": "00:00:49,080"
+			},
+			"offsets": {
+				"from": 43800,
+				"to": 49080
+			},
+			"text": " We can express it as x times E1 plus y times E2."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:49,080",
+				"to": "00:00:54,160"
+			},
+			"offsets": {
+				"from": 49080,
+				"to": 54160
+			},
+			"text": " In other words, every vector is built using these two basic directions."
+		},
+		{
+			"timestamps": {
+				"from": "00:00:54,160",
+				"to": "00:00:59,920"
+			},
+			"offsets": {
+				"from": 54160,
+				"to": 59920
+			},
+			"text": " Now imagine applying a matrix A, the first column tells us where E1 lands, the second"
+		},
+		{
+			"timestamps": {
+				"from": "00:00:59,920",
+				"to": "00:01:02,560"
+			},
+			"offsets": {
+				"from": 59920,
+				"to": 62560
+			},
+			"text": " column tells us where E2 lands."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:02,560",
+				"to": "00:01:08,960"
+			},
+			"offsets": {
+				"from": 62560,
+				"to": 68960
+			},
+			"text": " And because every vector is made from these two bases vector, knowing where they land"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:08,960",
+				"to": "00:01:14,600"
+			},
+			"offsets": {
+				"from": 68960,
+				"to": 74600
+			},
+			"text": " tells us where every other vector goes, the two columns tell the whole two-dimensional"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:14,600",
+				"to": "00:01:15,600"
+			},
+			"offsets": {
+				"from": 74600,
+				"to": 75600
+			},
+			"text": " story."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:15,600",
+				"to": "00:01:21,000"
+			},
+			"offsets": {
+				"from": 75600,
+				"to": 81000
+			},
+			"text": " Let's see this in action with our first example, a shear transformation."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:21,000",
+				"to": "00:01:24,680"
+			},
+			"offsets": {
+				"from": 81000,
+				"to": 84680
+			},
+			"text": " Here this matrix, one zero, one one."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:24,680",
+				"to": "00:01:28,080"
+			},
+			"offsets": {
+				"from": 84680,
+				"to": 88080
+			},
+			"text": " Let's apply it, a standard bias vector."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:28,080",
+				"to": "00:01:34,440"
+			},
+			"offsets": {
+				"from": 88080,
+				"to": 94440
+			},
+			"text": " First E1, multiplying gives us one comma one, so our horizontal basis vector moves diagonally"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:34,440",
+				"to": "00:01:35,440"
+			},
+			"offsets": {
+				"from": 94440,
+				"to": 95440
+			},
+			"text": " upwards."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:35,440",
+				"to": "00:01:42,600"
+			},
+			"offsets": {
+				"from": 95440,
+				"to": 102600
+			},
+			"text": " Now E2, its image is zero comma one, and here's the beautiful part, E2 stays exactly where"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:42,600",
+				"to": "00:01:43,760"
+			},
+			"offsets": {
+				"from": 102600,
+				"to": 103760
+			},
+			"text": " it was."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:43,760",
+				"to": "00:01:47,520"
+			},
+			"offsets": {
+				"from": 103760,
+				"to": 107520
+			},
+			"text": " So now watch what happens to the entire unit square."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:47,520",
+				"to": "00:01:54,200"
+			},
+			"offsets": {
+				"from": 107520,
+				"to": 114200
+			},
+			"text": " As the basis vector moves the square, transforms into a parallelogram, but this isn't just"
+		},
+		{
+			"timestamps": {
+				"from": "00:01:54,200",
+				"to": "00:01:55,760"
+			},
+			"offsets": {
+				"from": 114200,
+				"to": 115760
+			},
+			"text": " one square moving."
+		},
+		{
+			"timestamps": {
+				"from": "00:01:55,760",
+				"to": "00:02:00,000"
+			},
+			"offsets": {
+				"from": 115760,
+				"to": 120000
+			},
+			"text": " The entire coordinate grid follows the same transformation."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:00,000",
+				"to": "00:02:06,640"
+			},
+			"offsets": {
+				"from": 120000,
+				"to": 126640
+			},
+			"text": " For a general input, x comma y, the transformation produces x comma x plus y."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:06,640",
+				"to": "00:02:09,600"
+			},
+			"offsets": {
+				"from": 126640,
+				"to": 129600
+			},
+			"text": " So the horizontal direction changes."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:09,600",
+				"to": "00:02:16,080"
+			},
+			"offsets": {
+				"from": 129600,
+				"to": 136080
+			},
+			"text": " The vertical direction stays fixed, and every point follows the same rule, that's a shear."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:16,080",
+				"to": "00:02:18,640"
+			},
+			"offsets": {
+				"from": 136080,
+				"to": 138640
+			},
+			"text": " But here's an important question."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:18,640",
+				"to": "00:02:21,180"
+			},
+			"offsets": {
+				"from": 138640,
+				"to": 141180
+			},
+			"text": " What actually makes a transformation linear?"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:21,180",
+				"to": "00:02:27,040"
+			},
+			"offsets": {
+				"from": 141180,
+				"to": 147040
+			},
+			"text": " A linear transformation must preserve two operations, addition and scalar multiplication."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:27,040",
+				"to": "00:02:28,680"
+			},
+			"offsets": {
+				"from": 147040,
+				"to": 148680
+			},
+			"text": " Let's understand both."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:28,680",
+				"to": "00:02:30,200"
+			},
+			"offsets": {
+				"from": 148680,
+				"to": 150200
+			},
+			"text": " First, additivity."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:30,200",
+				"to": "00:02:35,480"
+			},
+			"offsets": {
+				"from": 150200,
+				"to": 155480
+			},
+			"text": " If we add two input vectors and then transform this sum, we should get exactly the same result"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:35,480",
+				"to": "00:02:40,120"
+			},
+			"offsets": {
+				"from": 155480,
+				"to": 160120
+			},
+			"text": " as transforming each vector separately and adding those outputs."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:40,120",
+				"to": "00:02:46,800"
+			},
+			"offsets": {
+				"from": 160120,
+				"to": 166800
+			},
+			"text": " In mathematical language, t of u plus v equals t of u plus t of v."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:46,800",
+				"to": "00:02:48,800"
+			},
+			"offsets": {
+				"from": 166800,
+				"to": 168800
+			},
+			"text": " Second, homogeneity."
+		},
+		{
+			"timestamps": {
+				"from": "00:02:48,800",
+				"to": "00:02:55,040"
+			},
+			"offsets": {
+				"from": 168800,
+				"to": 175040
+			},
+			"text": " If we multiply an input vector by a scalar, its transformed output must scale by the exact"
+		},
+		{
+			"timestamps": {
+				"from": "00:02:55,040",
+				"to": "00:03:00,320"
+			},
+			"offsets": {
+				"from": 175040,
+				"to": 180320
+			},
+			"text": " same scalar, t of cu equals c times of u."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:00,320",
+				"to": "00:03:05,640"
+			},
+			"offsets": {
+				"from": 180320,
+				"to": 185640
+			},
+			"text": " So remember, a linear transformation preserves addition and scalar multiplication, and an"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:05,640",
+				"to": "00:03:09,480"
+			},
+			"offsets": {
+				"from": 185640,
+				"to": 189480
+			},
+			"text": " immediate consequences that origin stays fixed."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:09,480",
+				"to": "00:03:11,880"
+			},
+			"offsets": {
+				"from": 189480,
+				"to": 191880
+			},
+			"text": " Now comes one of the most interesting parts."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:11,880",
+				"to": "00:03:17,360"
+			},
+			"offsets": {
+				"from": 191880,
+				"to": 197360
+			},
+			"text": " So far, we have stated that with a matrix and studied the transformation, it performs."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:17,360",
+				"to": "00:03:21,120"
+			},
+			"offsets": {
+				"from": 197360,
+				"to": 201120
+			},
+			"text": " But what if we start with the transformation itself?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:21,120",
+				"to": "00:03:22,720"
+			},
+			"offsets": {
+				"from": 201120,
+				"to": 202720
+			},
+			"text": " Can we build the matrix?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:22,720",
+				"to": "00:03:28,760"
+			},
+			"offsets": {
+				"from": 202720,
+				"to": 208760
+			},
+			"text": " Let's make this function, t of x comma y equals x plus y comma x minus y."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:28,760",
+				"to": "00:03:34,240"
+			},
+			"offsets": {
+				"from": 208760,
+				"to": 214240
+			},
+			"text": " We already know that a matrix representing a linear transformation is determined by where"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:34,240",
+				"to": "00:03:36,800"
+			},
+			"offsets": {
+				"from": 214240,
+				"to": 216800
+			},
+			"text": " it sends the standard basis vector."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:36,800",
+				"to": "00:03:38,840"
+			},
+			"offsets": {
+				"from": 216800,
+				"to": 218840
+			},
+			"text": " So let's find those images."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:38,840",
+				"to": "00:03:45,480"
+			},
+			"offsets": {
+				"from": 218840,
+				"to": 225480
+			},
+			"text": " Step one, apply t to e1, substituting 1 comma 0 gives us 1 comma 1."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:45,480",
+				"to": "00:03:53,400"
+			},
+			"offsets": {
+				"from": 225480,
+				"to": 233400
+			},
+			"text": " Now step two, apply t to e2, substituting 0 comma 1 gives us 1 comma minus 1."
+		},
+		{
+			"timestamps": {
+				"from": "00:03:53,400",
+				"to": "00:03:55,160"
+			},
+			"offsets": {
+				"from": 233400,
+				"to": 235160
+			},
+			"text": " And now what's this?"
+		},
+		{
+			"timestamps": {
+				"from": "00:03:55,160",
+				"to": "00:04:00,360"
+			},
+			"offsets": {
+				"from": 235160,
+				"to": 240360
+			},
+			"text": " We take these two transformed vectors and place them directly into the columns of our"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:00,360",
+				"to": "00:04:01,360"
+			},
+			"offsets": {
+				"from": 240360,
+				"to": 241360
+			},
+			"text": " matrix."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:01,360",
+				"to": "00:04:05,320"
+			},
+			"offsets": {
+				"from": 241360,
+				"to": 245320
+			},
+			"text": " Our matrix becomes 1 1, 1 minus 1, and that's it."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:05,320",
+				"to": "00:04:09,280"
+			},
+			"offsets": {
+				"from": 245320,
+				"to": 249280
+			},
+			"text": " We have constructed the matrix directly from the transformation."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:09,280",
+				"to": "00:04:12,160"
+			},
+			"offsets": {
+				"from": 249280,
+				"to": 252160
+			},
+			"text": " But let's verify that it actually works."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:12,160",
+				"to": "00:04:15,220"
+			},
+			"offsets": {
+				"from": 252160,
+				"to": 255220
+			},
+			"text": " Take the input vector 3 comma 2."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:15,220",
+				"to": "00:04:19,800"
+			},
+			"offsets": {
+				"from": 255220,
+				"to": 259800
+			},
+			"text": " Using the original function, we get 3 plus 2 and 3 minus 2."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:19,800",
+				"to": "00:04:21,240"
+			},
+			"offsets": {
+				"from": 259800,
+				"to": 261240
+			},
+			"text": " That's 5 comma 1."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:21,240",
+				"to": "00:04:24,760"
+			},
+			"offsets": {
+				"from": 261240,
+				"to": 264760
+			},
+			"text": " Now multiply the same input by our constructed matrix."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:24,760",
+				"to": "00:04:27,680"
+			},
+			"offsets": {
+				"from": 264760,
+				"to": 267680
+			},
+			"text": " We get 5 comma 1 again."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:27,680",
+				"to": "00:04:29,680"
+			},
+			"offsets": {
+				"from": 267680,
+				"to": 269680
+			},
+			"text": " And that's one connection."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:29,680",
+				"to": "00:04:31,520"
+			},
+			"offsets": {
+				"from": 269680,
+				"to": 271520
+			},
+			"text": " So what did we discover?"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:31,520",
+				"to": "00:04:38,440"
+			},
+			"offsets": {
+				"from": 271520,
+				"to": 278440
+			},
+			"text": " First, the columns of a matrix tells us where the standard basis vector land."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:38,440",
+				"to": "00:04:43,080"
+			},
+			"offsets": {
+				"from": 278440,
+				"to": 283080
+			},
+			"text": " Second, a linear transformation preserves adhesion and scalar multiplication."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:43,080",
+				"to": "00:04:48,400"
+			},
+			"offsets": {
+				"from": 283080,
+				"to": 288400
+			},
+			"text": " And third, we can construct its matrix simply by applying the transformation to those basis"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:48,400",
+				"to": "00:04:52,060"
+			},
+			"offsets": {
+				"from": 288400,
+				"to": 292060
+			},
+			"text": " vector and placing the results into the columns."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:52,060",
+				"to": "00:04:54,400"
+			},
+			"offsets": {
+				"from": 292060,
+				"to": 294400
+			},
+			"text": " That's the beauty of linear transformations."
+		},
+		{
+			"timestamps": {
+				"from": "00:04:54,400",
+				"to": "00:04:59,880"
+			},
+			"offsets": {
+				"from": 294400,
+				"to": 299880
+			},
+			"text": " A matrix isn't just a collection of numbers, it's a way of describing how an entire space"
+		},
+		{
+			"timestamps": {
+				"from": "00:04:59,880",
+				"to": "00:05:06,040"
+			},
+			"offsets": {
+				"from": 299880,
+				"to": 306040
+			},
+			"text": " changes and once you understand where the basis vector go, you can understand where everything"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:06,040",
+				"to": "00:05:08,800"
+			},
+			"offsets": {
+				"from": 306040,
+				"to": 308800
+			},
+			"text": " else goes, the matrix effect."
+		},
+		{
+			"timestamps": {
+				"from": "00:05:08,800",
+				"to": "00:05:11,160"
+			},
+			"offsets": {
+				"from": 308800,
+				"to": 311160
+			},
+			"text": " How matrices transform the space?"
+		},
+		{
+			"timestamps": {
+				"from": "00:05:11,160",
+				"to": "00:05:11,920"
+			},
+			"offsets": {
+				"from": 311160,
+				"to": 311920
+			},
+			"text": " Thank you so much."
+		}
+	]
+}
