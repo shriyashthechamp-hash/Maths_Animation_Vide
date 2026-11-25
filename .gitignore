@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Remotion & Build Outputs
+dist/
+build/
+out/
+renders/
+.remotion/
+.cache/
+
+# Development Tooling & Cloned Vendor Repositories
+tooling/
+.aider-desk/
+.agents/
+skills-lock.json
+
+# Audio & Private Media
+# Raw user voiceover recordings are preserved locally and excluded from version control
+*.m4a
+public/voiceover.m4a
+New Recording 3.m4a
+
+# OS & Environment Metadata
+.DS_Store
+Thumbs.db
+*.log
+.env*
+.vscode/
+.idea/
